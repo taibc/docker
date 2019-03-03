@@ -1,0 +1,43 @@
+Administrator@HESEKVIZ1MPJLMF MINGW64 /d/Working/projects/docker/visists
+$ docker-compose up
+Starting visists_node-app_1 ...
+Starting visists_node-app_1 ... done
+Attaching to visists_redis-servers_1, visists_node-app_1
+redis-servers_1  | 1:C 03 Mar 2019 13:39:26.516 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-servers_1  | 1:C 03 Mar 2019 13:39:26.516 # Redis version=5.0.3, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-servers_1  | 1:C 03 Mar 2019 13:39:26.516 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 * Running mode=standalone, port=6379.
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 # Server initialized
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 * DB loaded from disk: 0.000 seconds
+redis-servers_1  | 1:M 03 Mar 2019 13:39:26.521 * Ready to accept connections
+node-app_1       |
+node-app_1       | > @ start /app
+node-app_1       | > node index.js
+node-app_1       |
+node-app_1       | Listening on port 8081
+node-app_1       | events.js:173
+node-app_1       |       throw er; // Unhandled 'error' event
+node-app_1       |       ^
+node-app_1       |
+node-app_1       | Error: Redis connection to redis-server:6379 failed - getaddrinfo ENOTFOUND redis-server redis-server:6379
+node-app_1       |     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:58:26)
+node-app_1       | Emitted 'error' event at:
+node-app_1       |     at RedisClient.on_error (/app/node_modules/redis/index.js:406:14)
+node-app_1       |     at Socket.<anonymous> (/app/node_modules/redis/index.js:279:14)
+node-app_1       |     at Socket.emit (events.js:197:13)
+node-app_1       |     at emitErrorNT (internal/streams/destroy.js:82:8)
+node-app_1       |     at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)
+node-app_1       |     at processTicksAndRejections (internal/process/next_tick.js:76:17)
+node-app_1       | npm ERR! code ELIFECYCLE
+node-app_1       | npm ERR! errno 1
+node-app_1       | npm ERR! @ start: `node index.js`
+node-app_1       | npm ERR! Exit status 1
+node-app_1       | npm ERR!
+node-app_1       | npm ERR! Failed at the @ start script.
+node-app_1       | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+node-app_1       |
+node-app_1       | npm ERR! A complete log of this run can be found in:
+node-app_1       | npm ERR!     /root/.npm/_logs/2019-03-03T13_39_40_921Z-debug.log
+visists_node-app_1 exited with code 1
